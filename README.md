@@ -1,9 +1,7 @@
 # Maternal Health Risk Prediction
 
 This project applies supervised machine learning techniques to predict maternal health risk levels (Low, Mid, High) based on clinical features.  
-The dataset was collected from hospitals, community clinics, and maternal healthcare centers in rural Bangladesh through an IoT-based monitoring system.  
-
-
+The dataset was collected from hospitals, community clinics, and maternal healthcare centers  
 
 ## 1. Problem Statement
 
@@ -14,8 +12,6 @@ The goal of this project is to build a supervised machine learning model that pr
 - **Importance**: Early detection reduces maternal mortality and improves pregnancy outcomes.  
 - **Beneficiaries**: Doctors, community health workers, and public health policymakers.  
 - **ML Task**: Multiclass classification.  
-
-
 
 ## 2. Dataset
 
