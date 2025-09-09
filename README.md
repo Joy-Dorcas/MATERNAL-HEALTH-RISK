@@ -3,7 +3,7 @@
 This project applies supervised machine learning techniques to predict maternal health risk levels (Low, Mid, High) based on clinical features.  
 The dataset was collected from hospitals, community clinics, and maternal healthcare centers in rural Bangladesh through an IoT-based monitoring system.  
 
----
+
 
 ## 1. Problem Statement
 
@@ -15,7 +15,7 @@ The goal of this project is to build a supervised machine learning model that pr
 - **Beneficiaries**: Doctors, community health workers, and public health policymakers.  
 - **ML Task**: Multiclass classification.  
 
----
+
 
 ## 2. Dataset
 
@@ -37,7 +37,7 @@ The goal of this project is to build a supervised machine learning model that pr
 | HeartRate    | Integer | Resting heart rate                                                         | bpm    |
 | RiskLevel    | Target  | Risk intensity level (Low, Mid, High)                                       | -      |
 
----
+
 
 ## 3. Data Collection & Understanding
 
@@ -49,7 +49,7 @@ The goal of this project is to build a supervised machine learning model that pr
   - Correlation heatmap  
   - Risk level distribution (class balance check)  
 
----
+
 
 ## 4. Data Preprocessing
 
@@ -59,7 +59,7 @@ The goal of this project is to build a supervised machine learning model that pr
 - Train-test split (e.g., 80/20).  
 - Apply resampling if class imbalance is detected.  
 
----
+
 
 ## 5. Modeling
 
@@ -72,7 +72,7 @@ Baseline and advanced models considered:
 Hyperparameter tuning is performed using GridSearchCV or RandomizedSearchCV.  
 Final model is chosen based on best generalization performance.  
 
----
+
 
 ## 6. Evaluation
 
@@ -88,7 +88,7 @@ Visualizations:
 - Validation curves (hyperparameter analysis)  
 - Learning curves (bias vs variance analysis)  
 
----
+
 
 ## 7. Error Analysis
 
@@ -97,7 +97,7 @@ Visualizations:
 - Discuss possible causes: limited data, overlapping feature ranges, model complexity.  
 - Suggest improvements: collect more data, engineer new features, test additional algorithms.  
 
----
+
 
 ## 8. Model Interpretation
 
@@ -106,7 +106,7 @@ Visualizations:
   - Abnormal blood pressure strongly contributes to high-risk predictions.  
   - Elevated blood sugar and body temperature increase risk level.  
 
----
+
 
 ## 9. Deployment
 
