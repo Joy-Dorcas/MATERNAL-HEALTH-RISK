@@ -1,19 +1,28 @@
-# MATERNAL-HEALTH-RISK
-Maternal health complications are a major concern in global healthcare, especially in rural and resource-limited areas. The goal of this project is to apply supervised machine learning methods to predict maternal health risk levels (low, mid, high) using clinical and demographic features.  
-
 # Maternal Health Risk Prediction
 
-This project applies supervised machine learning techniques to predict maternal health risk levels based on clinical features.  
+This project applies supervised machine learning techniques to predict maternal health risk levels (Low, Mid, High) based on clinical features.  
 The dataset was collected from hospitals, community clinics, and maternal healthcare centers in rural Bangladesh through an IoT-based monitoring system.  
 
+---
 
+## 1. Problem Statement
 
-## Dataset
+Maternal health complications are a significant global challenge, especially in rural and resource-limited areas.  
+The goal of this project is to build a supervised machine learning model that predicts maternal health risk levels to support early detection and timely interventions.  
+
+- **Problem**: Predict maternal risk levels based on clinical features.  
+- **Importance**: Early detection reduces maternal mortality and improves pregnancy outcomes.  
+- **Beneficiaries**: Doctors, community health workers, and public health policymakers.  
+- **ML Task**: Multiclass classification.  
+
+---
+
+## 2. Dataset
 
 - **Name**: Maternal Health Risk  
 - **Donated**: August 14, 2023  
 - **Instances**: 1,013  
-- **Features**: 6 (all clinical and demographic)  
+- **Features**: 6 (clinical and demographic)  
 - **Target**: RiskLevel (Categorical: Low, Mid, High)  
 - **Missing Values**: None  
 
@@ -28,39 +37,79 @@ The dataset was collected from hospitals, community clinics, and maternal health
 | HeartRate    | Integer | Resting heart rate                                                         | bpm    |
 | RiskLevel    | Target  | Risk intensity level (Low, Mid, High)                                       | -      |
 
-**Introductory Paper**:  
-Ahmed, Marzia, M. A. Kashem, Mostafijur Rahman, and S. Khatun.  
-*"Review and Analysis of Risk Factor of Maternal Health in Remote Area Using the Internet of Things (IoT)"*.  
-Lecture Notes in Electrical Engineering, vol 632, 2020.
+---
 
+## 3. Data Collection & Understanding
 
+- Data collected via IoT-based maternal health monitoring systems in Bangladesh.  
+- Dataset contains only numerical features and a categorical target.  
+- No missing values.  
+- Exploratory Data Analysis (EDA) includes:  
+  - Distribution of each feature  
+  - Correlation heatmap  
+  - Risk level distribution (class balance check)  
 
-## Project Structure
+---
 
-maternal-health-risk/
-│
-├── data/
-│ └── maternal_health_risk.csv # Raw dataset
-│
-├── src/
-│ ├── preprocess.py # Data preprocessing
-│ ├── train.py # Model training
-│ ├── evaluate.py # Model evaluation
-│
-├── app.py # Streamlit app for interactive demo
-│
-├── requirements.txt # Dependencies
-└── README.md # Project documentation
+## 4. Data Preprocessing
 
-yaml
-Copy code
+- Handle outliers in features such as blood pressure and blood sugar.  
+- Normalize/standardize numerical features.  
+- Encode target variable (Low, Mid, High → 0, 1, 2).  
+- Train-test split (e.g., 80/20).  
+- Apply resampling if class imbalance is detected.  
 
+---
 
+## 5. Modeling
 
-## Installation
+Baseline and advanced models considered:  
+- Logistic Regression  
+- Decision Tree  
+- Random Forest  
+- XGBoost  
 
-Clone this repository and install dependencies:
+Hyperparameter tuning is performed using GridSearchCV or RandomizedSearchCV.  
+Final model is chosen based on best generalization performance.  
 
-Dataset collected through IoT-based monitoring systems in Bangladesh.
+---
 
-Special thanks to the researchers: Marzia Ahmed, M. A. Kashem, Mostafijur Rahman, and S. Khatun.
+## 6. Evaluation
+
+Metrics used:  
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+
+Visualizations:  
+- Confusion matrix  
+- Feature importance (tree-based models)  
+- Validation curves (hyperparameter analysis)  
+- Learning curves (bias vs variance analysis)  
+
+---
+
+## 7. Error Analysis
+
+- Identify misclassified cases in confusion matrix.  
+- Analyze whether errors occur more in specific risk levels.  
+- Discuss possible causes: limited data, overlapping feature ranges, model complexity.  
+- Suggest improvements: collect more data, engineer new features, test additional algorithms.  
+
+---
+
+## 8. Model Interpretation
+
+- Tree-based models provide feature importance ranking.  
+- Example insights:  
+  - Abnormal blood pressure strongly contributes to high-risk predictions.  
+  - Elevated blood sugar and body temperature increase risk level.  
+
+---
+
+## 9. Deployment
+
+- Deploy model with **Streamlit** for interactive prediction.  
+- Application allows healthcare workers to input patient data and receive real-time risk assessment.  
+
