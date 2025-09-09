@@ -6,7 +6,7 @@ Maternal health complications are a major concern in global healthcare, especial
 This project applies supervised machine learning techniques to predict maternal health risk levels based on clinical features.  
 The dataset was collected from hospitals, community clinics, and maternal healthcare centers in rural Bangladesh through an IoT-based monitoring system.  
 
----
+
 
 ## Dataset
 
@@ -33,7 +33,7 @@ Ahmed, Marzia, M. A. Kashem, Mostafijur Rahman, and S. Khatun.
 *"Review and Analysis of Risk Factor of Maternal Health in Remote Area Using the Internet of Things (IoT)"*.  
 Lecture Notes in Electrical Engineering, vol 632, 2020.
 
----
+
 
 ## Project Structure
 
@@ -55,7 +55,7 @@ maternal-health-risk/
 yaml
 Copy code
 
----
+
 
 ## Installation
 
