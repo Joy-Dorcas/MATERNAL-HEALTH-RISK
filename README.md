@@ -1,5 +1,7 @@
 # Maternal Health Risk Prediction
 
+https://maternal-risk-guardian.lovable.app/
+
 This project applies supervised machine learning techniques to predict maternal health risk levels (Low, Mid, High) based on clinical features.  
 The dataset was collected from hospitals, community clinics, and maternal healthcare centers  
 
